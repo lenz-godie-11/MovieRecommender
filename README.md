@@ -16,7 +16,7 @@ Rather than relying on generic movie rankings, MovieRecommender aims to make mov
 
 ---
 
-## 🎯 Project Vision
+## Project Vision
 
 The goal is to build a recommendation system that understands individual movie preferences and continuously improves its suggestions as users interact with the platform.
 
@@ -30,7 +30,7 @@ The system aims to:
 
 ---
 
-## 🧠 Machine Learning Architecture
+##  Machine Learning Architecture
 
 The platform will use a **Hybrid Recommendation Engine** that combines multiple machine learning techniques to generate relevant and personalized recommendations.
 
@@ -85,7 +85,7 @@ This will help address challenges such as:
 
 ---
 
-## 🎨 Frontend Architecture (Planned)
+##  Frontend Architecture (Planned)
 
 The frontend will be developed as a modern, responsive Single Page Application (SPA).
 
@@ -142,7 +142,7 @@ Features:
 
 ---
 
-## ⚙️ Planned Technology Stack
+##  Planned Technology Stack
 
 | Component | Technology |
 |---|---|
@@ -161,7 +161,7 @@ Features:
 
 ---
 
-## 🔄 How the System Works
+##  How the System Works
 
 The recommendation process will follow this general workflow:
 
@@ -174,7 +174,7 @@ The recommendation process will follow this general workflow:
 
 ---
 
-## 🚀 Project Development Roadmap
+## Project Development Roadmap
 
 The project will be developed incrementally:
 
@@ -192,7 +192,7 @@ The project will be developed incrementally:
 
 ---
 
-## 🌟 Expected Outcome
+## Expected Outcome
 
 MovieRecommender aims to deliver more than a traditional movie browsing application. It will demonstrate how machine learning can understand user behavior, identify meaningful patterns, and transform those patterns into personalized recommendations.
 

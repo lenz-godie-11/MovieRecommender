@@ -41,5 +41,3 @@ The frontend will be built as a fast, responsive, and highly visual Single Page 
 - **Styling:** Tailwind CSS (for rapid, modern UI development)
 - **State Management:** React Context or Redux (to manage user sessions and watchlist states)
 - **API Communication:** Axios / Fetch API (to communicate with the backend and ML model endpoints)
-
-> **Note:** The UI is designed with a "dark mode first" aesthetic to make movie posters pop, simulating a premium streaming service experience.

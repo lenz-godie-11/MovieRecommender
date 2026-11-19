@@ -17,60 +17,138 @@ The platform learns from users' movie preferences, ratings, viewing history, and
 Instead of presenting everyone with the same popular movies, MovieRecommender aims to understand what each user enjoys and help them discover films they are more likely to love.
 
 ---
+# 🎬 MovieRecommender
 
-## 🎯 Project Overview
+### Discover Movies. Understand Your Taste.
 
-MovieRecommender focuses on building a personalized movie discovery experience through machine learning and behavioral analysis.
+**MovieRecommender** is a machine learning-powered movie discovery platform designed to make discovering films more personal, intelligent, and engaging.
 
-The project aims to:
+The platform aims to learn from users' preferences, ratings, viewing history, and behavioral interactions to generate personalized movie recommendations.
 
-- **Personalize Discovery:** Recommend movies based on individual interests and preferences.
-- **Understand User Behavior:** Learn from ratings, clicks, watch history, and other interactions.
-- **Discover Connections:** Identify relationships between movies, genres, actors, directors, and users.
-- **Improve Recommendations:** Continuously refine suggestions using user feedback.
-- **Reduce Discovery Overload:** Help users find relevant movies without endlessly browsing through thousands of titles.
+Rather than showing everyone the same popular movies, MovieRecommender focuses on understanding individual interests, identifying meaningful patterns, and helping users discover films they are more likely to enjoy.
+
+**Less Searching. More Discovering.**
+
+---
+
+## 📌 Table of Contents
+
+- [About the Project](#-about-the-project)
+- [Project Objectives](#-project-objectives)
+- [Key Features](#-key-features)
+- [Machine Learning Architecture](#-machine-learning-architecture)
+- [System Architecture](#-system-architecture)
+- [Dataset and Data Processing](#-dataset-and-data-processing)
+- [Technology Stack](#-technology-stack)
+- [Model Evaluation](#-model-evaluation)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Development Roadmap](#-development-roadmap)
+- [Future Improvements](#-future-improvements)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🎯 About the Project
+
+Finding a movie to watch can become overwhelming when users have thousands of titles to choose from. Traditional movie platforms often rely on popularity, trending lists, or generic recommendations that may not reflect individual preferences.
+
+MovieRecommender aims to address this problem by applying machine learning techniques to understand user interests and provide more relevant movie suggestions.
+
+The platform will combine movie metadata, user ratings, and behavioral interactions to build a recommendation engine that continuously adapts to users' preferences.
+
+### The Problem We Aim to Solve
+
+- Too many movies and limited time to discover relevant ones.
+- Generic recommendations that do not reflect individual interests.
+- Difficulty discovering movies outside familiar genres.
+- Recommendation systems that lack sufficient understanding of user behavior.
+
+### Our Approach
+
+Build a hybrid recommendation system that combines content analysis, collaborative learning, and behavioral feedback to deliver a personalized movie discovery experience.
+
+---
+
+## 🎯 Project Objectives
+
+- **Personalized Discovery:** Generate movie recommendations based on individual preferences.
+- **Behavioral Understanding:** Learn from ratings, clicks, watch history, and other interactions.
+- **Relationship Discovery:** Identify connections between movies, genres, directors, actors, and users.
+- **Recommendation Quality:** Improve the relevance and diversity of suggested movies.
+- **Continuous Learning:** Incorporate new user interactions to refine future recommendations.
+- **Intelligent Discovery:** Help users discover movies they might not otherwise consider.
+
+---
+
+## ✨ Key Features
+
+The following features represent the planned product capabilities.
+
+| Feature | Description |
+|---|---|
+| Personalized Onboarding | Establish initial user preferences through movie selections and ratings. |
+| Movie Recommendations | Generate recommendations tailored to individual interests. |
+| Similar Movies | Discover films with similar genres, descriptions, and characteristics. |
+| Personalized Feed | Display dynamically generated movie collections. |
+| User Feedback | Capture likes, dislikes, ratings, and other interactions. |
+| Watchlist | Save movies for future viewing. |
+| Viewing History | Track previously watched movies. |
+| Recommendation Updates | Adapt suggestions as user preferences change. |
 
 ---
 
 ## 🧠 Machine Learning Architecture
 
-At the core of MovieRecommender is a **Hybrid Recommendation Engine** that combines different recommendation approaches to generate personalized movie suggestions.
+At the core of MovieRecommender is a **Hybrid Recommendation Engine** combining multiple recommendation techniques.
 
 ### 1. Content-Based Filtering
 
-Identifies and recommends movies based on their features and similarities.
+Content-based filtering recommends movies by analyzing their characteristics and identifying similarities between movie items.
 
-The system analyzes movie metadata such as:
+The system will analyze:
 
-- Genres
-- Directors
-- Cast members
-- Movie descriptions
-- Keywords and tags
+- Movie genres.
+- Directors.
+- Cast members.
+- Movie descriptions.
+- Keywords and tags.
 
 **Algorithms and Techniques:**
-- TF-IDF (Term Frequency–Inverse Document Frequency)
-- Cosine Similarity
 
-By comparing movie characteristics, the system can recommend films similar to those a user already enjoys.
+- TF-IDF (Term Frequency–Inverse Document Frequency).
+- Cosine Similarity.
+- Feature Extraction.
+- Text Vectorization.
+
+**How it works:**
+
+Movie metadata is transformed into numerical feature representations. The system calculates similarity between movies and recommends titles that share characteristics with movies a user already enjoys.
 
 ### 2. Collaborative Filtering
 
-Discovers relationships between users based on their movie preferences and interactions.
+Collaborative filtering identifies patterns in user-movie interactions to discover relationships between users with similar preferences.
 
-For example, when two users have similar movie interests, the system can recommend films enjoyed by one user to the other.
+For example, when two users have similar movie ratings, the system can recommend movies enjoyed by one user to the other.
 
 **Algorithms and Techniques:**
-- Matrix Factorization
-- Singular Value Decomposition (SVD)
 
-This approach identifies hidden patterns in user-movie interactions that may not be obvious from movie metadata alone.
+- Matrix Factorization.
+- Singular Value Decomposition (SVD).
+- User-Item Interaction Matrices.
+
+**How it works:**
+
+The system analyzes historical user ratings and interactions to identify latent relationships between users and movies.
+
+Unlike content-based filtering, this approach can discover relevant movies even when their metadata is quite different.
 
 ### 3. Implicit Feedback Learning
 
-The recommendation engine will go beyond traditional movie ratings by learning from user behavior.
+Traditional recommendation systems often depend on explicit user ratings. However, user behavior can provide additional information about preferences.
 
-Potential interaction signals include:
+MovieRecommender will explore behavioral signals such as:
 
 - Movie clicks and views.
 - Watch history.
@@ -79,101 +157,91 @@ Potential interaction signals include:
 - Likes and dislikes.
 - "Not Interested" selections.
 
-These signals provide additional information about user preferences and help improve recommendation relevance.
+These signals will provide additional information for understanding user interests.
 
-### 4. Hybrid Recommendation Engine
+### 4. Hybrid Recommendation Strategy
 
-The hybrid approach combines content-based and collaborative filtering to benefit from both techniques.
+The hybrid engine will combine content-based and collaborative filtering to leverage the strengths of both approaches.
 
-It aims to address common recommendation challenges:
+Potential benefits include:
 
-- **Cold Start:** Limited information about new users or movies.
-- **Data Sparsity:** Insufficient user-movie interactions.
-- **Preference Changes:** Users developing new interests over time.
-- **Recommendation Diversity:** Discovering relevant movies beyond familiar preferences.
+- Addressing cold-start challenges.
+- Reducing the effects of sparse interaction data.
+- Improving recommendation relevance.
+- Discovering movies beyond familiar preferences.
+- Adapting to changing user interests.
 
----
-
-## 🎨 Frontend Architecture (Planned)
-
-The frontend will provide a modern, responsive, and interactive movie discovery experience.
-
-It will also serve as the primary interface for collecting user feedback and behavioral data.
-
-### 1. User Onboarding
-
-An interactive introduction designed to establish an initial understanding of each user's movie preferences.
-
-**Planned Features:**
-- Personalized welcome experience.
-- Favorite genre selection.
-- Initial movie rating process.
-- Selection of 5–10 familiar movies to establish an initial preference profile.
-
-### 2. Personalized Movie Feed
-
-A dynamic homepage that displays movies based on individual preferences and recommendation results.
-
-**Planned Features:**
-- Responsive movie poster grid.
-- Infinite scrolling.
-- Personalized movie collections.
-- Dynamic recommendation sections:
-  - Top Picks for You
-  - Because You Watched...
-  - Trending Now
-  - Recommended for You
-- Quick actions for watchlist management and feedback.
-
-### 3. Movie Details & Interactions
-
-A dedicated page or modal displaying detailed information about individual movies.
-
-**Planned Features:**
-- Movie synopsis and descriptions.
-- Cast and director information.
-- Genres and release dates.
-- Interactive movie ratings.
-- Like and dislike functionality.
-- Similar movie recommendations.
-- User feedback collection.
-
-### 4. User Profile & Watchlist
-
-A personalized dashboard for managing movie preferences and discovery activities.
-
-**Planned Features:**
-- Personal watchlist.
-- Previously watched movies.
-- Rating and interaction history.
-- Recommendation preferences.
-- Account management.
-- Recommendation preference reset.
+The combination strategy and model weights will be determined through experimentation and evaluation.
 
 ---
 
-## ⚙️ Technology Stack (Proposed)
+## 🏗️ System Architecture
 
-| Component | Technology |
+MovieRecommender will follow a modular architecture that separates the user interface, backend services, data storage, and machine learning components.
+
+### High-Level Architecture
+
+```mermaid
+flowchart TD
+    A[User] --> B[React / Next.js Frontend]
+
+    B --> C[Backend API]
+
+    C --> D[(PostgreSQL Database)]
+
+    C --> E[Recommendation Engine]
+
+    F[Movie Dataset] --> G[Data Processing]
+    G --> H[Feature Extraction]
+
+    H --> E
+    D --> E
+
+    E --> I[Hybrid Recommendation]
+    I --> J[Personalized Movie Results]
+
+    J --> C
+    C --> B
+
+    B --> K[User Interactions]
+    K --> C
+    C --> D
+```
+
+### Main Components
+
+| Component | Responsibility |
 |---|---|
-| Frontend | React.js / Next.js |
-| UI Styling | Tailwind CSS |
-| State Management | React Context / Redux |
-| API Communication | Axios / Fetch API |
-| Backend | Python / Django / FastAPI |
-| Machine Learning | Scikit-learn |
-| Data Processing | Pandas / NumPy |
-| Recommendation Algorithms | TF-IDF, Cosine Similarity, SVD |
-| Database | PostgreSQL |
-| Model Development | Jupyter Notebook |
-
-*The technology stack is subject to refinement as development progresses.*
+| Frontend | Movie discovery and user interaction. |
+| Backend API | Business logic, authentication, and communication between components. |
+| Database | Stores users, movies, ratings, and interaction records. |
+| Data Processing | Cleans and prepares movie and interaction data. |
+| ML Engine | Generates and ranks personalized recommendations. |
+| Feedback Pipeline | Collects interactions for future recommendation improvements. |
 
 ---
 
-## 🔄 System Workflow
+## 📊 Dataset and Data Processing
 
-The platform will operate through the following recommendation pipeline:
+The recommendation engine will initially use publicly available movie datasets for experimentation, training, and evaluation.
 
-1. **User Interaction:** Users explore movies, rate films, manage watchlists, and interact with recommendations.
-2. **Data
+### Proposed Data Sources
+
+**1. MovieLens**
+
+A movie recommendation dataset containing user ratings, movie identifiers, and other recommendation-related information.
+
+Website: https://grouplens.org/datasets/movielens/
+
+**2. TMDB**
+
+The Movie Database provides movie metadata, including descriptions, genres, cast, directors, and other movie information through its API, subject to its terms and attribution requirements.
+
+Website: https://www.themoviedb.org/
+
+### Data Processing Pipeline
+
+The data preparation process will include:
+
+1. Dataset collection and exploration.
+2. Data cleaning and duplicate removal
